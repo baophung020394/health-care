@@ -23,7 +23,7 @@
         background-color: $color-2e2e2e;
         min-height: 144px;
         max-height: 144px;
-        max-width: 231px;
+        max-width: 216px;
 
         @include responsive(992px) {
           max-width: 100%;

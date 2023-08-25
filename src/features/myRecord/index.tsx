@@ -244,20 +244,6 @@ const MyRecord: React.FC = () => {
       date: '2021.05.21'
     },
     {
-      myexerciseId: '1',
-      myexerciseTitle: '家事全般（立位・軽い）',
-      mydiaryKcal: '26kcal',
-      mydiaryTime: '10min',
-      date: '2021.05.21'
-    },
-    {
-      myexerciseId: '1',
-      myexerciseTitle: '家事全般（立位・軽い）',
-      mydiaryKcal: '26kcal',
-      mydiaryTime: '10min',
-      date: '2021.05.21'
-    },
-    {
       myexerciseId: '10',
       myexerciseTitle: '家事全般（立位・軽い）',
       mydiaryKcal: '26kcal',
@@ -266,6 +252,20 @@ const MyRecord: React.FC = () => {
     },
     {
       myexerciseId: '11',
+      myexerciseTitle: '家事全般（立位・軽い）',
+      mydiaryKcal: '26kcal',
+      mydiaryTime: '10min',
+      date: '2021.05.21'
+    },
+    {
+      myexerciseId: '12',
+      myexerciseTitle: '家事全般（立位・軽い）',
+      mydiaryKcal: '26kcal',
+      mydiaryTime: '10min',
+      date: '2021.05.21'
+    },
+    {
+      myexerciseId: '13',
       myexerciseTitle: '家事全般（立位・軽い）',
       mydiaryKcal: '26kcal',
       mydiaryTime: '10min',

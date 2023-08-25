@@ -91,12 +91,23 @@
               background-color: $color-777777;
               max-height: 72px;
               display: block;
-              padding: 23px 32px;
+
               color: $white;
               font-size: $font-18;
               font-weight: $font-weight-light;
               // border-bottom: 1px solid #2e2e2e;
               position: relative;
+              button {
+                cursor: pointer;
+                padding: 23px 32px;
+                color: $white;
+                font-size: $font-18;
+                font-weight: $font-weight-light;
+                background-color: transparent;
+                border: none;
+                width: 100%;
+                text-align: left;
+              }
               &::before {
                 content: '';
                 position: absolute;

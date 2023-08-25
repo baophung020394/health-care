@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
                         boxShadow='none'
                         icon={MemoIcon}
                         className='navbar-items__button'
-                        onClick={() => navigate('/tops')}
+                        onClick={() => navigate('/myrecords')}
                       />
                     </li>
                     <li
@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
                         boxShadow='none'
                         icon={ChallangeIcon}
                         className='navbar-items__button'
-                        onClick={() => navigate('/myrecords')}
+                        onClick={() => navigate('/tops')}
                       />
                     </li>
                     <li
@@ -118,12 +118,30 @@ const Navbar: React.FC = () => {
                       {isOpenSubmenu ? (
                         <Box className='navbar-items__submenu'>
                           <ul className='submenu__items'>
-                            <li className='submenu__item'>自分の記録</li>
-                            <li className='submenu__item'>体重グラフ</li>
-                            <li className='submenu__item'>目標</li>
-                            <li className='submenu__item'>選択中のコース</li>
-                            <li className='submenu__item'>コラム一覧</li>
-                            <li className='submenu__item'>設定</li>
+                            <li className='submenu__item'>
+                              <button onClick={() => navigate('/myrecords')}>自分の記録</button>
+                            </li>
+                            <li className='submenu__item'>
+                              <button>体重グラフ</button>
+                            </li>
+                            <li className='submenu__item'>
+                              <button>目標</button>
+                            </li>
+                            <li className='submenu__item'>
+                              <button>選択中のコース</button>
+                            </li>
+                            <li className='submenu__item'>
+                              <button
+                                onClick={() => {
+                                  navigate('/columns')
+                                }}
+                              >
+                                コラム一覧
+                              </button>
+                            </li>
+                            <li className='submenu__item'>
+                              <button>設定</button>
+                            </li>
                           </ul>
                         </Box>
                       ) : null}
