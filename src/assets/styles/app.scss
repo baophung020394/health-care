@@ -1,0 +1,85 @@
+@import '../../assets/styles/scss/mixins';
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$bg-color: transparent;
+/*
+* VARIABLES COLORS
+*/
+$primary-color: #000000;
+$secondary-color: #2b76ff;
+$placeholder-color: #f6f6f6;
+$white: #ffffff;
+$border-color: #f6f6f6;
+$color-414141: #414141;
+$color-fca500: #fca500;
+$color-ffcc21: #ffcc21;
+$color-ff963c: #ff963c;
+$color-707070: #707070;
+$color-777777: #777777;
+$color-2e2e2e: #2e2e2e;
+$color-ea6c00: #ea6c00;
+
+/*
+* VARIABLES FONTS
+*/
+$font-10: 10px;
+$font-11: 11px;
+$font-12: 12px;
+$font-14: 14px;
+$font-15: 15px;
+$font-16: 16px;
+$font-18: 18px;
+$font-20: 20px;
+$font-22: 22px;
+$font-24: 24px;
+$font-25: 25px;
+$font-32: 32px;
+$font-40: 40px;
+$font-44: 44px;
+$font-52: 52px;
+$font-56: 56px;
+$font-60: 60px;
+$font-72: 72px;
+
+/*
+  * VARIABLES FONT-WEIGHT
+  */
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+body {
+  background: $bg-color;
+  font-family: 'Inter', sans-serif !important;
+  margin: 0;
+  padding: 0;
+  @include responsive(768px) {
+    min-width: 400px;
+  }
+}
+
+/*
+* Elements
+*/
+button,
+a,
+p,
+span,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Inter', sans-serif !important;
+}
+img {
+  width: 100%;
+  height: auto;
+}

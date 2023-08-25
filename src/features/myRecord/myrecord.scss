@@ -1,0 +1,313 @@
+@import '../../assets/styles/app.scss';
+@import '../../assets/styles/scss/mixins';
+.my-record-wrap {
+  margin-top: 56px;
+  .my-record-entry {
+    max-width: 960px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 56px;
+    @include responsive(992px) {
+      flex-direction: column;
+    }
+    .entry-button {
+      position: relative;
+      width: 100%;
+      max-width: 288px;
+      max-height: 288px;
+      border: 24px solid $color-ffcc21;
+      box-sizing: border-box;
+      @include responsive(992px) {
+        max-width: 100%;
+        max-height: unset;
+        margin-bottom: 16px;
+      }
+      &__image {
+        position: relative;
+        img {
+          width: 100% !important;
+          height: 100% !important;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #000;
+          opacity: 0.7;
+        }
+      }
+      &__text {
+        position: absolute;
+        z-index: 9;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+          font-size: $font-25;
+          font-weight: $font-weight-normal;
+          color: $color-ffcc21;
+          letter-spacing: 0.125px;
+          text-align: center;
+          display: block;
+        }
+        a {
+          font-size: $font-14;
+          font-weight: $font-weight-light;
+          color: $white;
+          background-color: $color-ff963c;
+          font-family: 'Hiragino Kaku Gothic Pro' !important;
+          text-align: center;
+          display: inline-block;
+          margin: 0 auto;
+          padding: 2px 16px;
+          min-width: 160px;
+          max-width: 160px;
+          text-decoration: none;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .my-record-diarys {
+    .heading {
+      color: $color-414141;
+      font-size: $font-22;
+      text-transform: uppercase;
+      font-weight: $font-weight-normal;
+      max-width: 960px;
+      margin: 0 auto 6px;
+    }
+    .list-diarys {
+      max-width: 960px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      @include responsive(992px) {
+        // flex-direction: column;
+        justify-content: space-between;
+      }
+      .diary {
+        position: relative;
+        margin-bottom: 12px;
+        margin-right: 12px;
+        width: calc(25% - 12px);
+        border: 1px solid $color-707070;
+        padding: 16px;
+        max-width: 231px;
+        box-sizing: border-box;
+        @include responsive(992px) {
+          width: calc(50% - 12px);
+        }
+        h3 {
+          color: $color-414141;
+          font-size: $font-18;
+          font-weight: $font-weight-normal;
+        }
+        h5 {
+          color: $color-414141;
+          font-size: $font-18;
+          font-weight: $font-weight-normal;
+        }
+        p {
+          margin-top: 8px;
+          color: $color-414141;
+          font-family: 'Hiragino Kaku Gothic Pro;' !important;
+          font-size: $font-12;
+          font-weight: $font-weight-normal;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical;
+          display: -webkit-box;
+          text-align: justify;
+        }
+      }
+    }
+    .btn-loadmore {
+      text-align: center;
+      margin: 28px auto 64px;
+      &__button {
+        background: linear-gradient(33deg, #ffcc21 0%, #ff963c 100%);
+        font-size: $font-18;
+        font-weight: $font-weight-light;
+        font-family: 'Hiragino Kaku Gothic Pro' !important;
+        color: $white;
+        min-width: 296px;
+        min-height: 56px;
+        max-height: 56px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .my-record-chart {
+    background-color: $color-414141;
+    padding: 16px 24px;
+    max-width: 960px;
+    margin: 0 auto 56px;
+    box-sizing: border-box;
+
+    &__box {
+      .box-heading {
+        display: flex;
+        align-items: flex-start;
+        h5 {
+          color: $white;
+          font-size: $font-15;
+          font-weight: $font-weight-normal;
+          letter-spacing: 0.15px;
+          padding-right: 15px;
+          box-sizing: border-box;
+          max-width: 100px;
+          margin-right: 16px;
+        }
+        h3 {
+          color: $white;
+          font-size: $font-22;
+          font-weight: $font-weight-normal;
+          letter-spacing: 0.11px;
+        }
+      }
+    }
+    .box-buttons {
+      margin-top: 8px;
+      &__button {
+        color: $color-ffcc21;
+        font-size: $font-15;
+        font-weight: $font-weight-light;
+        letter-spacing: 0.075px;
+        padding: 2px 20px;
+        box-sizing: border-box;
+        max-height: 24px;
+        border-radius: 11px;
+        margin-right: 16px;
+        &:hover {
+          transform: scale(1);
+        }
+        &--active {
+          background-color: $color-ffcc21;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .my-record-exercise {
+    max-width: 960px;
+    margin: 0 auto 56px;
+    &__box {
+      background-color: $color-414141;
+      padding: 16px 24px;
+      .box-heading {
+        display: flex;
+        align-items: flex-start;
+        h5 {
+          color: $white;
+          font-size: $font-15;
+          font-weight: $font-weight-normal;
+          letter-spacing: 0.15px;
+          padding-right: 15px;
+          box-sizing: border-box;
+          max-width: 100px;
+          margin-right: 16px;
+        }
+        h3 {
+          color: $white;
+          font-size: $font-22;
+          font-weight: $font-weight-normal;
+          letter-spacing: 0.11px;
+        }
+      }
+      .list-excercise {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 6px;
+        max-height: 200px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+          width: 6px;
+          border-radius: 10px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+          background: $color-777777;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: $color-ffcc21;
+          border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+        .exercise {
+          width: 46%;
+          padding-left: 15px;
+          border-bottom: 1px solid $color-777777;
+          margin-bottom: 8px;
+          @include responsive(768px) {
+            width: 100%;
+          }
+          &__item {
+            display: flex;
+            justify-content: space-between;
+            &--left {
+              h4 {
+                font-size: $font-15;
+                font-weight: $font-weight-light;
+                letter-spacing: 0.075px;
+                color: $white;
+                font-family: 'Hiragino Kaku Gothic Pro' !important;
+                position: relative;
+                &::before {
+                  content: '';
+                  position: absolute;
+                  top: 5px;
+                  left: -15px;
+                  background-color: $white;
+                  width: 5px;
+                  height: 5px;
+                  border-radius: 50%;
+                }
+              }
+              p {
+                color: $color-ffcc21;
+                font-size: $font-15;
+                font-weight: $font-weight-normal;
+                letter-spacing: 0.075px;
+              }
+            }
+            &--right {
+              p {
+                color: $color-ffcc21;
+                font-size: $font-18;
+                font-weight: $font-weight-normal;
+                letter-spacing: 0.09px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

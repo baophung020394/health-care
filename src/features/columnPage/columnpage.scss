@@ -1,0 +1,217 @@
+@import '../../assets/styles/app.scss';
+@import '../../assets/styles/scss/mixins';
+
+.columns {
+  margin-top: 56px;
+  &__top {
+    max-width: 960px;
+    margin: 0 auto;
+    margin-bottom: 56px;
+
+    &__boxs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @include responsive(992px) {
+        flex-direction: column;
+      }
+      .col__box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: $color-2e2e2e;
+        min-height: 144px;
+        max-height: 144px;
+        max-width: 231px;
+
+        @include responsive(992px) {
+          max-width: 100%;
+          max-height: unset;
+          margin-bottom: 16px;
+        }
+        h3 {
+          font-size: $font-22;
+          font-weight: $font-weight-normal;
+          color: $color-ffcc21;
+          letter-spacing: 0.11px;
+          text-align: center;
+        }
+        p {
+          font-size: $font-18;
+          color: $white;
+          font-family: 'Hiragino Kaku Gothic Pro' !important;
+          font-weight: $font-weight-light;
+        }
+      }
+      .col__line {
+        width: 56px;
+        height: 1px;
+        background-color: $white;
+        margin: 10px auto 8px;
+      }
+    }
+  }
+  &__bottom {
+    .filter-food {
+      display: flex;
+      justify-content: space-evenly;
+      max-width: 728px;
+      margin: 25px auto 22px;
+      &__button {
+        position: relative;
+        .btn-filter {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+          font-size: $font-20;
+          font-weight: $font-weight-normal;
+          text-transform: inherit;
+
+          .MuiButton-startIcon {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .list-food {
+      max-width: 960px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      .food {
+        margin-bottom: 16px;
+        margin-right: 8px;
+        width: calc(25% - 8px);
+
+        @include responsive(992px) {
+          width: calc(50% - 8px);
+          box-sizing: border-box;
+        }
+        &__media {
+          position: relative;
+        }
+        &__image {
+          max-width: 234px;
+          max-height: 144px;
+          @include responsive(768px) {
+            width: 100%;
+            max-width: 100%;
+          }
+          img {
+            max-width: 234px;
+            max-height: 144px;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover;
+            @include responsive(768px) {
+              width: 100%;
+              max-width: 100%;
+            }
+          }
+        }
+        &__text {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+          background-color: $color-ffcc21;
+          padding: 7px 10px;
+          font-size: $font-15;
+          font-weight: $font-weight-normal;
+          color: $white;
+          max-height: 32px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          span {
+            text-transform: capitalize;
+            margin-left: 16px;
+          }
+        }
+
+        &__card {
+          &--text {
+            color: $color-414141;
+            font-size: $font-15;
+            font-weight: $font-weight-normal;
+            letter-spacing: 0.075px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+          }
+        }
+        &__hashtag {
+          display: flex;
+          align-items: center;
+          margin-top: 8px;
+          &--tag {
+            color: $color-ff963c;
+            font-size: $font-12;
+            font-weight: $font-weight-light;
+            letter-spacing: 0.06px;
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+    .btn-loadmore {
+      text-align: center;
+      margin: 28px auto 64px;
+      &__button {
+        background: linear-gradient(33deg, #ffcc21 0%, #ff963c 100%);
+        font-size: $font-18;
+        font-weight: $font-weight-light;
+        font-family: 'Hiragino Kaku Gothic Pro' !important;
+        color: $white;
+        min-width: 296px;
+        min-height: 56px;
+        max-height: 56px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.parent-layer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-background {
+  fill: none;
+  stroke: #ccc;
+}
+
+.circle-progress {
+  fill: none;
+  stroke: $white;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.8s ease-in-out;
+}
+
+.circle-text {
+  font-size: $font-25;
+  font-weight: $font-weight-normal;
+  text-shadow: 0px 0px 6px $color-fca500;
+  fill: $white;
+  alignment-baseline: middle;
+}
+
+.circle-text-small {
+  font-size: $font-18;
+  font-weight: $font-weight-normal;
+  text-shadow: 0px 0px 6px $color-fca500;
+  fill: $white;
+  alignment-baseline: middle;
+}
